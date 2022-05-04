@@ -272,9 +272,23 @@
                 conditions for storing or accessing cookies on your browser.</h6>
             <h6>www.docplanner.com © 2022</h6>
         </footer>
+        <script>
+            window.onscroll = function () { myFunction() };
 
-        <script src="main.js">
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+            var viewportOffset = {
+                x: 0,
+                y: $(window).scrollTop()
+            };
         </script>
 </body>
-
 </html>
